@@ -1,0 +1,1 @@
+"import asyncio`nfrom app.core.database import AsyncSessionLocal`nfrom app.models.user import AcademicUnit`nasync def create():`n    async with AsyncSessionLocal() as db:`n        unit = AcademicUnit(name='Instytut Technologii Informatycznych', code='ITI')`n        db.add(unit)`n        await db.commit()`n        print('OK:', unit.id)`nasyncio.run(create())" 
